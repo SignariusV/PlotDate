@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 dates=[]
 values=[]
-file_name='bilirubin.txt'
-with open(file_name) as file:
+name='weight'
+with open(f'{name}.txt') as file:
     for str_line in file.readlines():
         date, value=str_line.split('_')
         dates.append(datetime.date(*list(map(int, date.split(',')))))
