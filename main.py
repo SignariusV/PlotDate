@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 dates=[]
 values=[]
-file_name='weight.txt'
+file_name='gemo.txt'
 with open(file_name) as file:
     for str_line in file.readlines():
         date, value=str_line.split('_')
@@ -19,9 +19,8 @@ timeFmt = mdates.DateFormatter('%d.%m')
 
 x = np.array([(event - dates[0]).days for event in dates])
 y = np.array(values)
-a, b, c= np.polyfit(x, y, 2)
-print(a,b,c)
-yy = a * x ** 2 + b * x + c
+a, b, c, d, e, f= np.polyfit(x, y, 5)
+yy = a * x ** 5 + b * x**4 + c*x**3+d*x**2+e*x+f
 fig, ax = plt.subplots()
 plt.plot(dates, values, 'r.')
 plt.plot(dates, yy)
