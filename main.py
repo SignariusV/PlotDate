@@ -2,9 +2,10 @@ import datetime
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import numpy as np
+
+name='weight'
 dates=[]
 values=[]
-name='weight'
 with open(f'{name}.txt') as file:
     for str_line in file.readlines():
         date, value=str_line.split('_')
