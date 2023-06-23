@@ -20,8 +20,8 @@ timeFmt = mdates.DateFormatter('%d.%m')
 
 x = np.array([(event - dates[0]).days for event in dates])
 y = np.array(values)
-a, b, c, d= np.polyfit(x, y, 3)
-yy = a * x ** 3 + b * x**2 + c*x+d
+a, b, c, d, e= np.polyfit(x, y, 4)
+yy = a * x ** 4 + b * x**3 + c*x**2+d*x+e
 fig, ax = plt.subplots()
 plt.plot(dates, values, 'r')
 plt.plot(dates, yy)
