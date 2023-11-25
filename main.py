@@ -24,7 +24,7 @@ a, b, c, d, e= np.polyfit(x, y, 4)
 yy = a * x ** 4 + b * x**3 + c*x**2+d*x+e
 fig, ax = plt.subplots()
 plt.plot(dates, values, 'r')
-plt.plot(dates, yy)
+#plt.plot(dates, yy)
 # ax.xaxis.set_major_locator(months)
 ax.xaxis.set_major_formatter(timeFmt)
 ax.xaxis.set_minor_locator(days)
